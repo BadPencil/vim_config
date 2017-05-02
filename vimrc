@@ -6,14 +6,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " 插件放在这下面
 call vundle#begin()
 
-	" VIM插件管理
-	Plugin 'VundleVim/Vundle.vim'
+" VIM插件管理
+Plugin 'VundleVim/Vundle.vim'
 
-	" 代码补全
-	"Plugin 'Valloric/YouCompleteMe'
+" 代码补全
+"Plugin 'Valloric/YouCompleteMe'
 
-	" 美化状态栏
-	Plugin 'Lokaltog/vim-powerline'
+" 美化状态栏
+Plugin 'Lokaltog/vim-powerline'
 
 call vundle#end()
 
