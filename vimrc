@@ -6,14 +6,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " 插件放在这下面
 call vundle#begin()
 
-	" VIM插件管理
-	Plugin 'VundleVim/Vundle.vim'
+" VIM插件管理
+Plugin 'VundleVim/Vundle.vim'
 
-	" 代码补全
-	"Plugin 'Valloric/YouCompleteMe'
+" 代码补全
+"Plugin 'Valloric/YouCompleteMe'
 
-	" 美化状态栏
-	Plugin 'Lokaltog/vim-powerline'
+" 美化状态栏
+Plugin 'Lokaltog/vim-powerline'
+
+" 目录树
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 
@@ -24,6 +27,7 @@ filetype plugin indent on
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " 开启文件类型检测
+filetype on
 
 " 显示行号
 set number
@@ -80,6 +84,38 @@ set wildmenu
 
 " 设置字体
 set guifont=Courier\ New
+
+" 设置目录树关闭隐藏的快捷键
+map <F2> :NERDTreeToggle<CR>
+
+" 关闭vim时，如果打开的文件除了NERDTree没有其他文件时
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" 启动 Vim 自动启动 nerd tree
+autocmd vimenter * NERDTree
+
+" 启动时光标在编辑栏
+wincmd w
+autocmd VimEnter * wincmd w
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
