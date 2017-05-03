@@ -18,6 +18,7 @@ Plugin 'Lokaltog/vim-powerline'
 " 目录树
 Plugin 'scrooloose/nerdtree'
 
+
 call vundle#end()
 
 " 根据侦测到的不同类型加载对应的插件
@@ -76,6 +77,9 @@ let g:Powerline_symbols = 'fancy'
 " 设置文件编码
 set encoding=utf-8
 
+" 设置匹配模式
+set showmatch
+
 " 高亮显示搜索结果
 set	hlsearch
 
@@ -98,9 +102,30 @@ autocmd vimenter * NERDTree
 wincmd w
 autocmd VimEnter * wincmd w
 
+" 高亮行和列
+"set cursorcolumn
+"set cursorline
 
+" 打开文件时自动回到上次编辑的地方
+if has("autocmd")
+	autocmd BufRead *.txt set tw=78
+	autocmd BufReadPost *
+	 \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+	 \		exe "normal g'\"" |
+	 \ endif
+endif
 
-
+" 按 F5 运行程序
+map <F5> : call CompileRun()<CR>
+func! CompileRun()
+	exec "w"	
+	if &filetype == 'c'
+		exec "!gcc % -o %"
+		exec "!time ./%<"
+	elseif &filetype == 'python'
+		exec "!time python3 %"
+	endif
+endfunc
 
 
 
