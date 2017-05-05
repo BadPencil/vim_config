@@ -1,7 +1,9 @@
 ## Vim配置 
 
-> cp vimrc ~/.vimrc
-> cp -r vim/ ~/.vim
+下载后使用
+
+	cp vimrc ~/.vimrc
+	cp -r vim/ ~/.vim
 
 
 
