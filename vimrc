@@ -92,18 +92,19 @@ set guifont=Courier\ New
 " 设置目录树关闭隐藏的快捷键
 map <F2> :NERDTreeToggle<CR>
 
-" 关闭vim时，如果打开的文件除了NERDTree没有其他文件时
+" 关闭vim时，如果打开的文件除了NERDTree没有其他文件时 则直接退出
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " 启动 Vim 自动启动 nerd tree
-autocmd vimenter * NERDTree
+
 
 " 启动时光标在编辑栏
 wincmd w
 autocmd VimEnter * wincmd w
 
-" 高亮行和列
+" 高亮列
 "set cursorcolumn
+" 高亮行
 "set cursorline
 
 " 打开文件时自动回到上次编辑的地方
@@ -126,22 +127,5 @@ func! CompileRun()
 		exec "!time python3 %"
 	endif
 endfunc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
