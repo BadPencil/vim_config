@@ -74,6 +74,9 @@ set t_Co=256
 " 设置状态栏主题风格
 let g:Powerline_symbols = 'fancy'
 
+" 设置 backspace 工作模式
+set backspace=indent,eol,start
+     
 " 设置文件编码
 set encoding=utf-8
 
