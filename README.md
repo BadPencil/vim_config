@@ -1,4 +1,4 @@
-## Vim of config  
+## config of Vim
 
 download and usage
 
