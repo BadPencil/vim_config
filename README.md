@@ -15,4 +15,5 @@ download and usage
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	
 插件安装
+
 	:PluginInstall
