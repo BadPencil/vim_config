@@ -110,7 +110,9 @@ autocmd VimEnter * wincmd w
 " 高亮行
 "set cursorline
 
+"---------------------------------------------------
 " 打开文件时自动回到上次编辑的地方
+"---------------------------------------------------
 if has("autocmd")
 	autocmd BufRead *.txt set tw=78
 	autocmd BufReadPost *
@@ -119,7 +121,9 @@ if has("autocmd")
 	 \ endif
 endif
 
+"---------------------------------------------------
 " 按 F5 运行程序
+"-------------------------------------------------- 
 map <F5> : call CompileRun()<CR>
 func! CompileRun()
 	exec "w"	
