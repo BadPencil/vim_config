@@ -12,6 +12,13 @@
 
 	:PluginInstall
 
+
+## 安装
+
+	cd vim_config
+	bash install.sh
+
+
 ### use  
 
 1. 使用 F2 打开隐藏目录树 
