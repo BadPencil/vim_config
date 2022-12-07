@@ -1,25 +1,4 @@
 " 关闭文件类型侦测
-filetype off                  " required
-
-set rtp+=~/.vim/bundle/Vundle.vim
-
-" 插件放在这下面
-call vundle#begin()
-
-" VIM插件管理
-Plugin 'VundleVim/Vundle.vim'
-
-" 代码补全
-"Plugin 'Valloric/YouCompleteMe'
-
-" 美化状态栏
-Plugin 'Lokaltog/vim-powerline'
-
-" 目录树
-Plugin 'scrooloose/nerdtree'
-
-
-call vundle#end()
 
 " 根据侦测到的不同类型加载对应的插件
 filetype plugin indent on 
